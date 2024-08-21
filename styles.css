@@ -1,0 +1,57 @@
+/* Basic reset and styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.accordion-menu {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    user-select: none;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #e4e4e4;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.accordion-content ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-content ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .accordion-header + .accordion-content {
+    max-height: 500px;
+}
